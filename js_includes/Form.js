@@ -29,6 +29,8 @@ jqueryWidget: {
 
         var t = this;
 
+        //
+
         function alertOrAddError(name, error) {
             var ae = $("label." + escape(t.errorCSSClass) + "[for=__ALL_FIELDS__]");
             if (ae.length > 0) {
@@ -161,7 +163,7 @@ jqueryWidget: {
 
 properties: {
     obligatory: ["html"],
-    countsForProgressBar: false,
+    countsForProgressBar: true,
     htmlDescription: function (opts) {
         return htmlCodeToDOM(opts.html);
     }
